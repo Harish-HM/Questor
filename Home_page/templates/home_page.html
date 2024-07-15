@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTOR</title>
+    <link rel="stylesheet" href="{% static 'home_page.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="static/HiveMinds.png" alt="Company Logo" class="company-logo" width=130px height=60px>
+            {% comment %} <img src="" alt="Product Logo" class="product-logo"> {% endcomment %}
+        </div>
+    </div>
+    <div class="container">
+        <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+        <label for="menu-icon"></label>
+        <nav class="nav"> 		
+            <ul class="pt-5">
+                <li><a href="{% url 'extract_keywords' %}">Keyowrd Extractor</a></li>
+                <li><a href="{% url 'fetch_links' %}">Google Search Extractor</a></li>
+                <li><a href="{% url 'extract_emails' %}">Email Extractor</a></li>
+            </ul>
+        </nav>
+
+        <div class="section_above">
+            <h1>QUESTOR</h1>
+        </div>
+
+        <div class= "section_below">    
+            <h2>About Us</h2>
+            <p> <b style="color:#ffeba7;">Keyword Extractor:</b> &nbsp A tool that identifies and extracts relevant keywords from url, helping users to find the 
+                most important and frequently occurring terms in a document or website.<br>
+                <b style="color:#ffeba7;">SERP Extractor:</b>&nbsp  Search Engine Results Pages (SERP) refer to the pages displayed by search engines in response 
+                to a user's keyword. Tools that extract SERP results gather information from these pages, such as rankings, 
+                URLs, and snippets, for analysis or SEO purposes.<br>
+                <b style="color:#ffeba7;">Email Extractor:</b>&nbsp  A tool that scans websites to find and collect email addresses. This helps in building email 
+                lists for marketing, outreach, or contact management purposes.</p>
+        </div> 
+    </div>
+</body>
+</html>

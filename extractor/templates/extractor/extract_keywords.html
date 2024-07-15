@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyword Extractor</title>
+    <link rel="stylesheet" href="{% static 'extract_keywords.css' %}">
+</head>
+<body>    
+    <div class="container">
+        <h1>Keyword Extractor</h1>
+        <div class="form-row">
+            <div class="section-form">
+                <h2>Upload Excel File</h2>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Upload and Extract Keywords</button>
+                </form>
+            </div>
+            <div class="section-form">
+                <h2>Enter Single URL</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ single_url_form.as_p }}
+                    <button type="submit">Extract Keyword</button>
+                </form>
+                {% if keyword_result %}
+                    <h3>Extracted Keyword: {{ keyword_result }}</h3>
+                {% endif %}
+            </div>
+        </div>
+        <ul class="button-list">
+            <li class="home-button"><a href="{% url 'home' %}">Home</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+
