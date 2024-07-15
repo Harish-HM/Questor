@@ -1,9 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
-html { 
-  overflow-y: scroll; 
-}
 
 body{
 	font-family: 'Montserrat', sans-serif;
@@ -13,7 +10,7 @@ body{
 	color: #ececee;
   position: absolute;
 	background-color: #1f2029;
-	overflow: auto;
+	overflow: hidden;
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
   background-position: center;
   background-repeat: repeat;
@@ -23,7 +20,7 @@ body{
   flex-direction: column;
 }
 
-.section_above{
+.section-center{
   position: absolute;
   top: 50%;
   left: 0;
@@ -137,7 +134,7 @@ h1{
   padding: 0;
   margin: 0;
   z-index: 9;
-  overflow: auto;
+  overflow: hidden;
   box-shadow: 0 8px 30px 0 rgba(0,0,0,0.3);
   background-color: #353746;
   animation: border-transform 7s linear infinite;
